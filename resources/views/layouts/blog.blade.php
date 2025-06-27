@@ -15,12 +15,12 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav"> {{-- flex justify-between items-center en el header original, y los ul flex space-x-4 se manejan con ml-auto o justify-content-end en el nav --}}
-            <ul class="navbar-nav"> {{-- flex space-x-4 en Tailwind --}}
+            <ul class="navbar-nav"> 
                 <li class="nav-item">
-                    <a class="nav-link text-secondary hover:text-dark" href="{{ route('about') }}">About Us</a> {{-- text-gray-600 hover:text-gray-800 en Tailwind --}}
+                    <a class="nav-link text-secondary hover:text-dark" href="{{ route('about') }}">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-secondary hover:text-dark" href="{{ route('contact') }}">Contact</a> {{-- text-gray-600 hover:text-gray-800 en Tailwind --}}
+                    <a class="nav-link text-secondary hover:text-dark" href="{{ route('contact') }}">Contact</a>
                 </li>
             </ul>
         </div>
