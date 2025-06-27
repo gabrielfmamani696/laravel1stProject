@@ -25,14 +25,18 @@
                 </div>
             </div>
         </section>
-        <aside class="col-md-3 mb-4"> {{-- w-1/4 en Tailwind es col-md-3 en Bootstrap --}}
-            <div class="card shadow-sm rounded-lg p-4"> {{-- bg-white p-6 shadow-md rounded-lg en Tailwind --}}
-                <h2 class="card-title fs-4 fw-semibold mb-4">Categories</h2> {{-- text-xl font-semibold mb-4 en Tailwind --}}
-                <ul class="list-unstyled space-y-2"> {{-- space-y-2 en Tailwind se maneja con márgenes o padding --}}
-                    <li class="mb-2"><a href="#" class="text-decoration-none text-secondary hover:text-dark">Technology</a></li> {{-- text-gray-600 hover:text-gray-800 en Tailwind --}}
-                    <li class="mb-2"><a href="#" class="text-decoration-none text-secondary hover:text-dark">Design</a></li>
-                    <li class="mb-2"><a href="#" class="text-decoration-none text-secondary hover:text-dark">Development</a></li>
-                    <li class="mb-2"><a href="#" class="text-decoration-none text-secondary hover:text-dark">Marketing</a></li>
+        <aside class="col-md-3 mb-4">
+            <div class="card shadow-sm rounded-lg p-4">
+                <h2 class="card-title fs-4 fw-semibold mb-4">Categories</h2>
+                <ul class="list-unstyled space-y-2">
+                    @foreach($categories as $category)
+                        <li class="mb-2">
+                            <a href="/?category_id={{ $category->id }}"
+                                class="text-decoration-none text-secondary hover:text-dark">
+                                {{ $category->categories }}
+                            </a>
+                        </li>
+                    @endforeach
                 </ul>
             </div>
         </aside>
